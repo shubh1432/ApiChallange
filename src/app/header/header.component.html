@@ -1,0 +1,58 @@
+<header>
+    <!-- Sidebar -->
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <a routerLink="/dashboard" *ngIf="!accessDeniedUser" class="list-group-item list-group-item-action py-2 ripple"
+                    aria-current="true">
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
+                </a>
+                <a routerLink="/datadashboard" *ngIf="!accessDeniedManager" class="list-group-item list-group-item-action py-2 ripple ">
+                    <i class="fas fa-chart-area fa-fw me-3"></i><span>User Dashboard</span>
+                </a>
+                <a  class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-lock fa-fw me-3"></i><span>Commericial</span></a>
+                <a class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-chart-line fa-fw me-3"></i><span>Technical</span></a>
+                <a  class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-chart-pie fa-fw me-3"></i><span>Support</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid main">
+            <h5>X E L E R A T E
+                <span>
+                    <h6> L E A R N I N G  
+                    </h6>
+                </span>
+            </h5>
+            <span *ngIf='!isLoginSuccess' id="login">
+                <button class="btn btn-primary" type="submit"
+                    routerLink="/login"> Login
+                </button>
+            </span>
+            <span *ngIf='isLoginSuccess' id="logout">
+                <button class="btn btn-primary" type="submit"
+                    (click)="onLogout()"> Logout
+                </button>
+            </span> 
+        </div>
+
+    </nav>
+    <!-- Navbar -->
+
+</header>
+
+<!--Main Navigation-->
+
+<!--Main layout-->
+<main style="margin-top: 58px;">
+    <div class="container pt-4"></div>
+</main>
+<!--Main layout-->

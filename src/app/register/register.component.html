@@ -1,0 +1,131 @@
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid main">
+      <h5>X E L E R A T E
+        <span>
+          <h6> L E A R N I N G
+          </h6>
+        </span>
+      </h5>
+      <span *ngIf='!isLoginSuccess' id="login">
+        <button class="btn btn-primary" type="submit" routerLink="/login"> Login
+        </button>
+      </span>
+      <span *ngIf='!isLoginSuccess' id="logout">
+        <button class="btn btn-primary" type="submit" routerLink="/login"> Logout
+        </button>
+      </span>
+    </div>
+
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <div class="text-center">
+      <div>
+        <h2>Please Register Here</h2><br>
+        <form [formGroup]="profile">
+
+          <label> Firstname <span style="color: red;"> * </span> </label> : <input type="text" placeholder="firstname"
+            formControlName="firstname">
+
+          <div *ngIf="profile.controls['firstname'].invalid && 
+                               (profile.controls['firstname'].dirty  ||  profile.controls['firstname'].touched)">
+
+            <div *ngIf="profile.controls['firstname'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <label> Lastname <span style="color: red;"> * </span> </label> : <input type="text" placeholder="lastname"
+            formControlName="lastname">
+          <div *ngIf="profile.controls['lastname'].invalid && 
+                (profile.controls['lastname'].dirty  ||  profile.controls['lastname'].touched)">
+
+            <div *ngIf="profile.controls['lastname'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <label> Mobile No <span style="color: red;"> * </span> </label> : <input type="text" placeholder="mobile No"
+            formControlName="mobile">
+
+          <div *ngIf="profile.controls['mobile'].invalid && 
+    (profile.controls['mobile'].dirty  ||  profile.controls['mobile'].touched)">
+
+            <div *ngIf="profile.controls['mobile'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+            <div *ngIf="profile.controls['mobile'].errors?.['minlength']">
+              Please Enter 10 digit Only
+            </div>
+
+            <div *ngIf="profile.controls['mobile'].errors?.['maxlength']">
+              Please Enter 10 digit Only
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <label> Company <span style="color: red;"> * </span> </label> : <input type="text" placeholder="company"
+            formControlName="company">
+
+          <div *ngIf="profile.controls['company'].invalid && 
+    (profile.controls['company'].dirty  ||  profile.controls['company'].touched)">
+
+            <div *ngIf="profile.controls['company'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <label> Username <span style="color: red;"> * </span> </label> : <input type="text" placeholder="username"
+            formControlName="username">
+
+          <div *ngIf="profile.controls['username'].invalid && 
+    (profile.controls['username'].dirty  ||  profile.controls['username'].touched)">
+
+            <div *ngIf="profile.controls['username'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <label> Password <span style="color: red;"> * </span> </label> : <input type="password" placeholder="password"
+            formControlName="password">
+
+          <div *ngIf="profile.controls['password'].invalid && 
+    (profile.controls['password'].dirty  ||  profile.controls['password'].touched)">
+
+            <div *ngIf="profile.controls['password'].errors?.['required']">
+              Please Enter the Required Field
+            </div>
+
+          </div>
+
+        </form> <br>
+        <button class="btn btn-primary bt1" type="reset" (click)="reset()"> Reset </button>
+        <button class="btn btn-primary bt2" type="submit" (click)="submitform()"> Submit Form </button><br><br>
+
+        <div style="background-color: white; color: rgb(29, 29, 119); font-weight: bolder;">
+          <p> Already Registered ? <span style="margin-left: 30px;"> <a routerLink="/login"> Click to Login </a> </span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>

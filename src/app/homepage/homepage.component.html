@@ -1,0 +1,30 @@
+<header>
+<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid main">
+        <h5>X E L E R A T E
+            <span>
+                <h6> L E A R N I N G  
+                </h6>
+            </span>
+        </h5>
+        <span *ngIf='isLoginSuccess' id="login">
+            <button class="btn btn-primary" type="submit"
+                routerLink="/login"> Login
+            </button>
+        </span>
+        <span *ngIf='!isLoginSuccess' id="logout">
+            <button class="btn btn-primary" type="submit"
+                routerLink="/login"> Logout
+            </button>
+        </span> 
+    </div>
+
+</nav>
+</header>
+
+<div class="container-fluid">
+<p id="line">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<marquee> <h3> Please login to continue ...!!! </h3> </marquee>
+<p id="line2">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+</div>

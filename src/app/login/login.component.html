@@ -1,0 +1,77 @@
+<header>
+  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid main">
+        <h5>X E L E R A T E
+            <span>
+                <h6> L E A R N I N G  
+                </h6>
+            </span>
+        </h5>
+        <span *ngIf='!isLoginSuccess' id="login">
+            <button class="btn btn-primary" type="submit"
+                routerLink="/login"> Login
+            </button>
+        </span>
+        <span *ngIf='!isLoginSuccess' id="logout">
+            <button class="btn btn-primary" type="submit"
+                routerLink="/login"> Logout
+            </button>
+        </span> 
+    </div>
+
+</nav>
+</header>
+
+
+<div class="container">
+    
+    <div class="card">
+       <div class="text-center">
+
+      <h2>Please Login to continue</h2><br>
+
+      <form [formGroup]="profile">
+
+        <label> Username <span style="color: red;"> * </span> </label> : <input type="text" placeholder="username"
+          formControlName="username">
+  
+        <div *ngIf="profile.controls['username'].invalid && 
+    (profile.controls['username'].dirty  ||  profile.controls['username'].touched)">
+  
+          <div *ngIf="profile.controls['username'].errors?.['required']">
+            Please Enter the Required Field
+          </div>
+  
+        </div>
+  
+        <br><br>
+  
+        <label> Password <span style="color: red;"> * </span> </label> : <input type="password" placeholder="password"
+          formControlName="password">
+  
+        <div *ngIf="profile.controls['password'].invalid && 
+    (profile.controls['password'].dirty  ||  profile.controls['password'].touched)">
+  
+          <div *ngIf="profile.controls['password'].errors?.['required']">
+            Please Enter the Required Field
+          </div>
+        
+        </div>
+
+        <div *ngIf="invalidUser">
+          <p style="margin-top: 15px; color: red;">{{invalidUserError}}</p>
+        </div>
+        
+      </form> <br><br>
+
+      <div>
+        <button class="btn btn-primary" type="submit" (click)="loginbtn()" > Login </button><br><br>
+      </div>
+       
+      <div style="background-color: white; color: rgb(22, 22, 90); font-weight: bolder;">
+              <p> Don't have an account ? <span> <a routerLink="/register"> Register Here </a> </span></p>
+      </div>
+
+    </div>
+  </div>

@@ -1,0 +1,129 @@
+<app-header></app-header>
+
+<div class="container">
+    <!-- <div>
+        <input type="text" placeholder="Search..." style="width: 450px; padding: 2px 20px; margin: 10px 0px; height: 30px;" >
+    </div> -->
+      
+    <div>
+      <input type="text" [(ngModel)]="filterText"  placeholder="Search by Student Name" style="width: 450px; padding: 2px 20px; margin: 10px 0px; height: 30px;">
+    </div>
+
+    <div>
+        <table class="table">
+          
+          <h5>MRC Harwell Induction</h5>
+          <tr>
+           <th>
+              Student Name
+          </th>
+
+          <th>
+            % Completed
+          </th>
+
+          <th>
+             Action 
+          </th>
+
+          </tr>
+
+          <tr *ngFor="let course of courseDetails | filterTextByStudentName:filterText; index as i ">
+            <td>{{course.firstname}}</td>
+            <td>{{course.courses.harwellInduction}}</td>
+            <td> <button type="button" class="btn btn-success " routerLink="/edit">Edit</button> </td>
+          </tr>
+         
+          <h5>MRC Business Continuity</h5>
+          <tr>
+            <th>
+               Student Name
+           </th>
+ 
+           <th>
+             % Completed
+           </th>
+ 
+           <th>
+              Action 
+           </th>
+ 
+           </tr>
+
+          <tr *ngFor="let course of courseDetails| filterTextByStudentName:filterText; index as i">
+            <td>{{course.firstname}}</td>
+            <td>{{course.courses.businessContinuity}}</td>
+            <td> <button type="button" class="btn btn-success " routerLink="/edit">Edit</button> </td>
+          </tr>
+
+          <h5>The Role Of The Animal Technician</h5>
+          <tr>
+            <th>
+               Student Name
+           </th>
+ 
+           <th>
+             % Completed
+           </th>
+ 
+           <th>
+              Action 
+           </th>
+ 
+           </tr>
+
+          <tr *ngFor="let course of courseDetails| filterTextByStudentName:filterText; index as i">
+            <td>{{course.firstname}}</td>
+            <td>{{course.courses.animaltech}}</td>
+            <td> <button type="button" class="btn btn-success " routerLink="/edit">Edit</button> </td>
+          </tr>
+
+          <h5>Michrobiological Safty Cabinets</h5>
+          <tr>
+            <th>
+               Student Name
+           </th>
+ 
+           <th>
+             % Completed
+           </th>
+ 
+           <th>
+              Action 
+           </th>
+ 
+           </tr>
+
+          <tr *ngFor="let course of courseDetails| filterTextByStudentName:filterText; index as i">
+            <td>{{course.firstname}}</td>
+            <td>{{course.courses.michrobiology}}</td>
+            <td> <button type="button" class="btn btn-success " routerLink="/edit">Edit</button> </td>
+          </tr>
+
+           <h5>Mobile Device Training</h5>
+           <tr>
+            <th>
+               Student Name
+           </th>
+ 
+           <th>
+             % Completed
+           </th>
+ 
+           <th>
+              Action 
+           </th>
+ 
+           </tr>
+
+          <tr *ngFor="let course of courseDetails| filterTextByStudentName:filterText; index as i">
+            <td>{{course.firstname}}</td>
+            <td>{{course.courses.mobiledevice}}</td>
+             <td> <button type="button" class="btn btn-success " routerLink="/edit">Edit</button> </td>
+          </tr> 
+
+        </table> 
+    </div><br>
+
+</div>
+

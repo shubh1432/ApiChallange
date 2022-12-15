@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "firstname": "Rohit",
+      "lastname": "Sharma",
+      "mobile": "1515252525",
+      "username": "rohit",
+      "password": "ro45",
+      "company": "BCCI",
+      "id": 5,
+      "courses": {
+        "harwellInduction": "74%",
+        "businessContinuity": "12%",
+        "animaltech": "56%",
+        "mobiledevice": "100%",
+        "michrobiology": "100%"
+      }
+    },
+    {
+      "firstname": "VIRAT",
+      "lastname": "KOHLI",
+      "mobile": "1212121211",
+      "username": "VIRAT",
+      "password": "VIRAT",
+      "company": "BCCI",
+      "id": 7,
+      "courses": {
+        "harwellInduction": "26%",
+        "businessContinuity": "35%",
+        "animaltech": "55%",
+        "mobiledevice": "22%",
+        "michrobiology": "12%"
+      }
+    },
+    {
+      "firstname": "Pal",
+      "lastname": "Hyd",
+      "mobile": "1515115225",
+      "username": "pal",
+      "password": "pal",
+      "company": "mahit nahi",
+      "id": 9,
+      "courses": {
+        "harwellInduction": "74%",
+        "businessContinuity": "12%",
+        "animaltech": "56%",
+        "mobiledevice": "100%",
+        "michrobiology": "100%"
+      }
+    },
+    {
+      "firstname": "tony",
+      "lastname": "stark",
+      "mobile": "1515151551",
+      "username": "tony",
+      "password": "tony",
+      "company": "Avengers",
+      "id": 10,
+      "courses": {
+        "harwellInduction": "26%",
+        "businessContinuity": "35%",
+        "animaltech": "55%",
+        "mobiledevice": "22%",
+        "michrobiology": "12%"
+      }
+    }
+  ],
+  "manager": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin@123"
+    }
+  ]
+}

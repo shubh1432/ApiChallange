@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="container">
+   <div>
+      <table class="table table-success table-striped">
+         <tr>
+            <th>
+               ID
+            </th>
+            
+            <th>
+               Firstname
+            </th>
+
+            <th>
+               Lastname
+            </th>
+
+            <th>
+               Mobile No
+            </th>
+
+            <th>
+               Company
+            </th>
+
+            <th>
+               Action
+            </th>
+
+            <th>
+               Details
+            </th>
+
+         </tr>
+         <tr *ngFor="let user of userCredentials ; index as i">
+            <td>{{i+1}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.mobile}}</td>
+            <td>{{user.company}}</td>
+            <td>
+
+               <button type="button" class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
+            </td>
+            <a routerLink="/details">see details</a>
+            <!-- <td> <button (click)="showDetail(user)"> See Details </button> </td> -->
+         </tr>
+      </table>
+   </div>
+</div>
+
+
+<!-- <div class="container">
+   <button (click)="getData()"> new </button>
+</div>
+ -->
